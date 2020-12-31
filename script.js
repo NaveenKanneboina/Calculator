@@ -15,14 +15,21 @@ for(var i=0;i<=9;i++){
   }
 }
 
-for(var i=10;i<=13;i++){
+for(var i=10;i<=14;i++){
   document.getElementById(i).onclick = function() {
-    b=a;
-    a=0;
-    operator=this.value
-    document.getElementById("history").innerHTML = b + operator;
-    document.getElementById("demo").innerHTML = a;
-    console.log(operator)
+    if(a!=0 && operator== undefined){
+      b=a;
+      a=0;
+      operator=this.value
+      if(operator=="power"){
+        document.getElementById("history").innerHTML = b;
+        document.getElementById("demo").innerHTML = a;
+      }
+      else{
+        document.getElementById("history").innerHTML = b + operator;
+        document.getElementById("demo").innerHTML = a;
+      }
+    }
   }
 }
 
@@ -32,24 +39,44 @@ document.getElementById("X").onclick = function(){
   document.getElementById("demo").innerHTML = a;
 }
 
+document.getElementById("square").onclick = function(){
+  if(a!= 0){
+    a = a*a
+    document.getElementById("demo").innerHTML = a ;
+  }
+}
+
+document.getElementById("1/x").onclick = function(){
+  if(a!= 0){
+    a = 1/a
+    document.getElementById("demo").innerHTML = a ;
+  }
+}
+
 document.getElementById("=").onclick = function(){
   document.getElementById("history").innerHTML = "";
   switch(operator){
     case "+": 
-    a=parseInt(b)+parseInt(a);
+    a=parseFloat(b)+parseFloat(a);
     document.getElementById("demo").innerHTML =a 
     break;
     case "-": 
-    a=parseInt(b)-parseInt(a);
+    a=parseFloat(b)-parseFloat(a);
     document.getElementById("demo").innerHTML =a 
     break;
     case "*": 
-    a=parseInt(b)*parseInt(a);
+    a=parseFloat(b)*parseFloat(a);
     document.getElementById("demo").innerHTML =a 
     break;
     case "/": 
-    a=parseInt(b)/parseInt(a);
+    a=parseFloat(b)/parseFloat(a);
+    document.getElementById("demo").innerHTML =a 
+    break;
+    case "power":
+    a=Math.pow(parseInt(b),parseInt(a));
     document.getElementById("demo").innerHTML =a 
     break;
 }
+operator=undefined;
 }
+
