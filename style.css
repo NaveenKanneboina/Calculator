@@ -1,6 +1,6 @@
 body{
     display: flex;
-    height: 100vh;
+    height:100vh;
     align-items: center;
     justify-content: space-between;
 }
@@ -11,4 +11,13 @@ button{
 input{
     height:50px;
     width:210px
+}
+.result{
+    border: 2px solid lightgray;
+    text-align: right;
+    padding-right: 5px;
+    margin-bottom: 5px;
+}
+p{
+ line-height:2px;
 }
