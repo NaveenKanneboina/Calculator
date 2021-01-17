@@ -172,17 +172,17 @@ function Palindrome() {
 document.getElementById("palinButton").onclick = function() {
   
   const length = input.length;
-  var reverseInput="";
+  var reverseInput = "";
 
   for (let i = length - 1; i >= 0; i--) {
     reverseInput += input[i];
   }
 
-  if(input == reverseInput){
-    document.getElementById("palinResult").innerText="palindrome"
-  }
-  else if(input == ""){
+  if(input == ""){
     document.getElementById("palinResult").innerText="Enter TExt"
+  }
+  else if(input == reverseInput){
+    document.getElementById("palinResult").innerText="palindrome"
   }
   else{
     document.getElementById("palinResult").innerText="Not a Palindrome"
