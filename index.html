@@ -6,35 +6,56 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-    </div>
-    <div>
-        <div class="result">
-            <p id="history"></p>
-            <p id="demo">0</p>
+    <div class="container">
+        <!------------- Prime number component ----------------------->
+        <div>
+            <h3>Checks number Prime are not</h3>
+            <!------------- Prime number Input ----------------------->
+            <input id="prime" type="number" min="1" placeholder="Enter Number" pattern=" 0+\.[0-9]*[1-9][0-9]*$"/>
+            <p id="primeResult"></p>
+            <button id="primeButton" class="submit">Submit</button>
         </div>
-        <button id="14" value="power">x<sup>n</sup></button>
-        <button id="1/x" value="">1/x</button>
-        <button id="square" value="">x<sup>2</sup></button>
-        <button id="X" value="">AC</button><br>
-        <button id="7" value="7">7</button>
-        <button id="8" value="8">8</button>
-        <button id="9" value="9">9</button>
-        <button id="10" value="/">/</button><br>
-        <button id="4" value="4">4</button>
-        <button id="5" value="5">5</button>
-        <button id="6" value="6">6</button>
-        <button id="11" value="*">*</button><br>
-        <button id="1" value="1">1</button>
-        <button id="2" value="2">2</button>
-        <button id="3" value="3">3</button>
-        <button id="12" value="-">-</button><br>
-        <button id="=" value="">=</button>
-        <button id="0" value="0">0</button>
-        <button id="" value="">.</button>
-        <button id="13" value="+">+</button>
+        <!-- <hr style="width: 250px;"> -->
+        <!------------- Calclulator component ----------------------->
+        <div>
+            <h3>Calculator</h3>
+            <!------------- Calclulator Result component ----------------------->
+            <div class="result">
+                <p id="history"></p>
+                <p id="demo">0</p>
+            </div>
+            <!------------- Calclulator Buttons ----------------------->
+            <button id="14" value="power">x<sup>n</sup></button>
+            <button id="1/x" value="">1/x</button>
+            <button id="square" value="">x<sup>2</sup></button>
+            <button id="X" value="">AC</button><br>
+            <button id="7" value="7">7</button>
+            <button id="8" value="8">8</button>
+            <button id="9" value="9">9</button>
+            <button id="10" value="/">/</button><br>
+            <button id="4" value="4">4</button>
+            <button id="5" value="5">5</button>
+            <button id="6" value="6">6</button>
+            <button id="11" value="*">*</button><br>
+            <button id="1" value="1">1</button>
+            <button id="2" value="2">2</button>
+            <button id="3" value="3">3</button>
+            <button id="12" value="-">-</button><br>
+            <button id="=" value="">=</button>
+            <button id="0" value="0">0</button>
+            <button id="" value="">.</button>
+            <button id="13" value="+">+</button>
+        </div>
+        <!-- <hr style="width: 250px;"> -->
+        <!------------- Palindrome component ----------------------->
+        <div>
+            <h3>Check Input Palindrome are not</h3>
+            <input id="palin" type="text" placeholder="Enter Number"/>
+            <p id="palinResult"></p>
+            <button id="palinButton" class="submit">Submit</button>
+        </div>
     </div>
-    <div></div>
+    <!------------------- Script Tag --------------->
     <script src="script.js"></script>
 </body>
 </html>
