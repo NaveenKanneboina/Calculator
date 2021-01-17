@@ -35,7 +35,7 @@ input{
  color: #fff;
  background-color: #4CAF50;
  border-radius: 15px;
- outline: dotted;
+ outline: none;
  border: none;
 }
 .submit:hover{
