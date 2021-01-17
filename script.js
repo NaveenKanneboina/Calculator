@@ -13,25 +13,25 @@ document.getElementById("primeButton").onclick = function() {
   console.log(number);
   if (number > 1) {
     if( number == 2){
-      document.getElementById("primeResult").innerText="Prime Number";
+      document.getElementById("primeResult").innerText="Prime Number 👍";
     }
     else{
         for (let i = 2; i < number; i++) {
           if (number % i == 0) {
-            document.getElementById("primeResult").innerText="Not Prime Number"
+            document.getElementById("primeResult").innerText="Not Prime Number 😐"
             break;
           }
           else{
-            document.getElementById("primeResult").innerText="Prime Number"
+            document.getElementById("primeResult").innerText="Prime Number 👍"
           }
         }
       }
   }
   else if(number == 1){
-    document.getElementById("primeResult").innerText="Neither Prime nor Composite."
+    document.getElementById("primeResult").innerText="Neither Prime nor Composite 🤘"
   }
   else{
-    document.getElementById("primeResult").innerText="Invalid Number"
+    document.getElementById("primeResult").innerText="Invalid Number 😡 Enter valid number"
   }
 }
 
@@ -179,13 +179,13 @@ document.getElementById("palinButton").onclick = function() {
   }
 
   if(input == ""){
-    document.getElementById("palinResult").innerText="Enter TExt"
+    document.getElementById("palinResult").innerText="Invalid Input 😡"
   }
   else if(input == reverseInput){
-    document.getElementById("palinResult").innerText="palindrome"
+    document.getElementById("palinResult").innerText="palindrome 👍"
   }
   else{
-    document.getElementById("palinResult").innerText="Not a Palindrome"
+    document.getElementById("palinResult").innerText="Not a Palindrome 😐"
   }
 }
 
